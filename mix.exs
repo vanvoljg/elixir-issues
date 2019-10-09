@@ -23,7 +23,8 @@ defmodule Issues.MixProject do
     [
       {:tesla, "~> 1.0"},
       {:mint, "~> 0.4"},
-      {:castore, "~> 0.1"}
+      {:castore, "~> 0.1"},
+      {:jason, "~>1.0"}
     ]
   end
 end
