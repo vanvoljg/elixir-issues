@@ -1,18 +1,5 @@
 defmodule Issues do
   @moduledoc """
-  Documentation for Issues.
+  Generate a table of the last *n* issues in a GitHub project
   """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Issues.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
 end
