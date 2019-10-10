@@ -3,6 +3,8 @@ defmodule Issues.CLI do
   Parse options passed on the CLI when calling the module
   """
 
+  import Issues.TableFormatter, only: [print_table_for_columns: 2]
+
   @default_count 4
 
   def run(argv) do
@@ -49,10 +51,12 @@ defmodule Issues.CLI do
     System.halt(0)
   end
 
-  def process({user, project, _count}) do
+  def process({user, project, count}) do
     Issues.GithubIssues.fetch(user, project)
     |> decode_response()
     |> sort_descending()
+    |> take_last(count)
+    |> print_table_for_columns(["number", "created_at", "title"])
   end
 
   def decode_response({:ok, body}), do: body
@@ -65,5 +69,11 @@ defmodule Issues.CLI do
   def sort_descending(issue_list) do
     issue_list
     |> Enum.sort(&(&1["created_at"] >= &2["created_at"]))
+  end
+
+  def take_last(issue_list, count) do
+    issue_list
+    |> Enum.take(count)
+    |> Enum.reverse()
   end
 end
