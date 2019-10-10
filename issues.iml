@@ -12,6 +12,11 @@
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/mime" />
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/mint" />
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/tesla" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/prod/lib/castore" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/prod/lib/jason" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/prod/lib/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/prod/lib/mint" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/prod/lib/tesla" />
       <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/castore" />
       <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/jason" />
       <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/mime" />
